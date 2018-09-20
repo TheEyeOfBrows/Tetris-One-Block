@@ -14,6 +14,6 @@ const loader = new ex.Loader([]);
 
 // Start the engine, and make it wait for the loader to finish loading before starting the engine code
 eng.start(loader).then(() => {
-  const board = new Board();
+  const board = new Board(eng.drawWidth, eng.drawHeight);
   eng.add(board);
 });

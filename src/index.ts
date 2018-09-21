@@ -1,4 +1,4 @@
-import Board from "./tetris/Board.js";
+import Board from "./tetris/board.js";
 
 // Create a new engine instance, creating a new canvas in the process
 const eng = new ex.Engine({

@@ -23,13 +23,13 @@ export default class Board extends ex.Actor {
       this.grid = new Array(this.gridHeight)
          .fill(new Array(this.gridWidth)
             .fill(Math.floor(Math.random() * this.colorArray.length)));
-      this.cellWidth = this.getWidth() / this.gridWidth;
-      this.cellHeight = this.getHeight() / this.gridHeight;
+      this.cellWidth = this.width / this.gridWidth;
+      this.cellHeight = this.height / this.gridHeight;
       this.gridBufferIsDirty = true;
 
       const offscreenCanvas: HTMLCanvasElement = document.createElement("canvas");
-      offscreenCanvas.width = this.getWidth();
-      offscreenCanvas.height = this.getHeight();
+      offscreenCanvas.width = this.width;
+      offscreenCanvas.height = this.height;
       this.offsceen = offscreenCanvas.getContext("2d");
    }
 
